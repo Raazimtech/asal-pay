@@ -1,13 +1,13 @@
 {
-  "name": "Ciwaan — Every place has an address",
-  "short_name": "Ciwaan",
-  "description": "Create, share and navigate to simple digital addresses.",
-  "start_url": "/ciwaan/",
-  "scope": "/ciwaan/",
+  "name": "Asal Pay — Digital Wallet Demo",
+  "short_name": "Asal Pay",
+  "description": "Asal Pay virtual wallet MVP demonstration.",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#f7faf8",
-  "theme_color": "#087f5b",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
   "orientation": "portrait-primary",
   "lang": "en",
-  "categories": ["navigation", "utilities", "maps"]
+  "categories": ["finance", "business", "utilities"]
 }
