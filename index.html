@@ -1,1 +1,29 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b1220"><link rel="manifest" href="/manifest.json"><title>Asal Pay</title></head><body><div id="app"></div><script type="module" src="/src/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Asal Pay digital wallet MVP demonstration.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <title>Asal Pay</title>
+  <script>
+    // Remove any service worker/cache left by the previous Ciwaan/Nuvio build.
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs =>
+        Promise.all(regs.map(r => r.unregister()))
+      ).catch(() => {});
+    }
+    if (window.caches) {
+      caches.keys().then(keys =>
+        Promise.all(keys.map(key => caches.delete(key)))
+      ).catch(() => {});
+    }
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
