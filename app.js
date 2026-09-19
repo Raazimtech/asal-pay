@@ -1,6 +1,6 @@
 const KEY="asalpay_demo_v1";
 const seed={users:[{id:"ASL-10001",name:"Demo User",phone:"+252630000000",pin:"1234",balance:250}],current:"+252630000000",tx:[{id:"TX-1001",type:"in",title:"Welcome credit",note:"Demo balance",amount:250,date:Date.now()}]};
-let state=JSON.parse(localStorage.getItem(KEY)||"null")||seed;
+let state=JSON.parse(localStorage.getItem(KEY)||"null")||seed; state.current=null;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 function save(){localStorage.setItem(KEY,JSON.stringify(state))}
 function user(){return state.users.find(u=>u.phone===state.current)}
