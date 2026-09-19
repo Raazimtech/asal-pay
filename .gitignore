@@ -1,8 +1,0 @@
-node_modules
-dist
-android/.gradle
-android/.idea
-android/local.properties
-.env
-.env.*
-!.env.example
